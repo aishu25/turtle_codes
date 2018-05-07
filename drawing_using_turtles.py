@@ -3,6 +3,31 @@ from random import *
 import itertools
 import turtle
 
+#drawing turtles:
+
+def random_heading():
+  number = randint(1,360)
+  setheading(number)
+
+t = Turtle()
+shape("turtle")
+
+def random_place():
+  penup()
+  x = randint(-100, 100)
+  y = randint(-100, 100)
+  goto(x,y)
+  pendown()
+
+for i in range(30):
+  random_place()
+  random_heading()
+  stamp()
+  speed(2)
+t.screen.exitonclick()
+t.screen.mainloop()
+
+
 # drawing stars:
 spiral = turtle.Turtle()
 for i in range(30):
